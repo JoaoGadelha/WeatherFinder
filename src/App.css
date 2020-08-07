@@ -1,0 +1,126 @@
+html {
+    overflow-y: hidden;
+}
+
+.App {
+    background: url('./img/desktop/main.jpg') center center/cover no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.App.clouds {
+    background: url('./img/clouds.jpg') center center/cover no-repeat;
+}
+
+.App.clouds::after {
+}
+
+.App::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.App>* {
+    z-index: 10;
+    position: relative;
+}
+
+.App .Grid-item {
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 100px auto auto;
+}
+
+.App .Head {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    align-self: end;
+}
+
+.App .Head h1 {
+    font-family: 'Great Vibes', cursive;
+    margin: 0;
+    display: inline-block;
+}
+
+.App input {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    background: none;
+    border: 0;
+    border-bottom: solid 1px white;
+    outline: none;
+    text-align: center;
+    color: white;
+    height: 40px;
+    font-weight:bold;
+}
+
+.App input::placeholder {
+    color:white;
+    font-weight:bold;
+}
+
+.App form  {
+    text-align:center;
+}
+
+.App form button {
+    margin-top:10px;
+    background:none;
+    color:white;
+    border:solid 1px white;
+    text-transform:uppercase;
+    font-weight:bold;
+    padding:10px;
+    transition:ease all 0.3s;
+    border-radius:10px;
+}
+
+.App form button:hover {
+    background:white;
+    color:black;
+    padding: 10px 100px;
+}
+
+/* Footer ******************************************************************************/
+
+.Footer {
+    color: white;
+    align-self: end;
+    background: rgb(29, 29, 29);
+    width: 100%;
+    text-align: center;
+    height: 30%;
+    font-size: 8px;
+    font-weight: lighter;
+    display: grid;
+    align-items: center;
+    grid-row: 4/5;
+}
+
+.Footer h1 {
+    margin: 0;
+}
+
+.Footer a {
+    color: white;
+    padding: 10px;
+    transition: 0.5s ease all;
+    font-weight: bold;
+}
+
+.Footer a:hover {
+    background: white;
+    color: black;
+    border-radius: 20px;
+}
