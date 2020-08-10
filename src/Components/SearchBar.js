@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import Result from './Result'
+import React, { useState } from 'react';
+import { useContext } from 'react';
+import {Context} from '../Context';
 
 function SearchBar() {
-    let [query, setQuery] = useState({});
+    let [query, setQuery] = useContext(Context);
     let [state, setState] = useState('');
     const API_key = 'eebebf1634f1daa8cb83bba4997df83d'; // Remove api key from here. This is not safe.
-    let timeOut;
     let aux;
-    let prevState = '';
 
     /*da5ba9ec4dd944afe5847fc5baba11fb*/
     const onChange = (e) => {
@@ -21,15 +20,14 @@ function SearchBar() {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=${API_key}`).then(resp => resp.json()).then(resp => setQuery(resp));
     }
 
-        return (
-            <div>
-                <form onSubmit={onSubmit}>
-                    <input placeholder='Insert your search here...' value={state} onChange={onChange} />
-                    <button>GO</button>
-                </form>
-                <Result query={query} />
-            </div>
-        )
+    return (
+        <div className='SearchBarContainer'>
+            <form onSubmit={onSubmit}>
+                <input placeholder='Insert your search here...' value={state} onChange={onChange} />
+                <button>GO</button>
+            </form>
+        </div>
+    )
 }
 
 export default SearchBar

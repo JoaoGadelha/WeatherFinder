@@ -1,21 +1,15 @@
-html {
-    overflow-y: hidden;
-}
 
 .App {
     background: url('./img/desktop/main.jpg') center center/cover no-repeat;
     width: 100vw;
     height: 100vh;
-    position: relative;
     display: grid;
     align-items: center;
 }
 
+
 .App.clouds {
     background: url('./img/clouds.jpg') center center/cover no-repeat;
-}
-
-.App.clouds::after {
 }
 
 .App::after {
@@ -32,10 +26,11 @@ html {
     position: relative;
 }
 
-.App .Grid-item {
+.App .Container {
     display: grid;
-    height: 100%;
     grid-template-rows: auto 100px auto auto;
+    height: 100%;
+    position:relative;
 }
 
 .App .Head {
@@ -92,6 +87,17 @@ html {
     padding: 10px 100px;
 }
 
+.App .ResultWrapper {
+    position:relative;
+}
+
+.App .ResultContainer {
+    position:absolute;
+    max-height: 100px;
+    margin: 0 auto;
+    width:100vw;
+}
+
 /* Footer ******************************************************************************/
 
 .Footer {
@@ -119,8 +125,45 @@ html {
     font-weight: bold;
 }
 
+
 .Footer a:hover {
     background: white;
     color: black;
     border-radius: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .App .ResultContainer {
+        font-size:20px;
+    }
+
+
+    .App .Footer *{
+        font-size:20px;
+    }
+
+
+}
+
+@media (max-width: 425px) {
+    .App .Head {
+        text-align: center;
+        font-size: 40px;
+        align-self: end;
+    }
+
+    .App input {
+     width:80%;
+    }
+
+    .App .ResultContainer {
+        font-size:10px;
+    }
+
+    .App .Footer *{
+        font-size:10px;
+    }
+
 }
