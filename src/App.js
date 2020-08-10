@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import './mobile.css';
 import Result from './Components/Result'
 import SearchBar from './Components/SearchBar'
 import Provider from './Context'
