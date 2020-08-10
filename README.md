@@ -1,9 +1,3 @@
-# Weather Finder
-
-React application based on the OpenWeather API to display weather information on a queried location.
-<br>
-Live site : https://joaoricardotg-weatherfinder.netlify.app
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
