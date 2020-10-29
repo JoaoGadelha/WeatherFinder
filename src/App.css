@@ -136,12 +136,12 @@
 
 @media (max-width: 768px) {
     .App .ResultContainer {
-        font-size:20px;
+        font-size:12px;
     }
 
 
     .App .Footer *{
-        font-size:20px;
+        font-size:12px;
     }
 
 
