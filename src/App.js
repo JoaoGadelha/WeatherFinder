@@ -15,8 +15,9 @@ function App() {
           <div className='ResultWrapper'>
             <Result />
           </div>
-        <div className="Footer"> <h1>Developed by João Gadelha - <a href='https://joaoricardotg.netlify.app'> Browse my previous projects </a></h1></div>
         </div>
+
+        <div className="Footer"> <h1>Developed by João Gadelha - <a href='https://joaoricardotg.netlify.app'> Browse my previous projects </a></h1></div>
       </div>
     </Provider>
   );
