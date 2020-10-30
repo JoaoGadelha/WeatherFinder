@@ -12,10 +12,10 @@ function App() {
         <div className="Container">
           <div className="Head"><h1>Weather Finder</h1></div>
           <SearchBar />
-          <div className = 'ResultWrapper'>
+          <div className='ResultWrapper'>
             <Result />
           </div>
-          <div className="Footer"> <h1>Developed by João Gadelha - <a href='https://joaoricardotg.netlify.app'> Browse my previous projects </a></h1></div>
+        <div className="Footer"> <h1>Developed by João Gadelha - <a href='https://joaoricardotg.netlify.app'> Browse my previous projects </a></h1></div>
         </div>
       </div>
     </Provider>
